@@ -15,7 +15,6 @@ const Index = () => {
         if (data.data[0].url) {
           console.log(data.data[0].url);
           setVideoJsOptions({
-            techOrder: ["html5"],
             autoplay: false,
             controls: true,
             preload: "metada",
