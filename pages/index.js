@@ -35,7 +35,7 @@ const Index = () => {
       });
   }, []);
 
-  if (isLoading) return <div>Loading video...</div>;
+  if (isLoading) return <div>Loading video data...</div>;
 
   return (
     <div className={styles.video}>
