@@ -1,29 +1,26 @@
-import { useCallback, useEffect, useState } from 'react'
-import videojs from 'video.js'
-import 'videojs-youtube'
+import { useCallback, useEffect, useState } from "react";
+import videojs from "video.js";
+import "videojs-youtube";
 
 const Player = (props) => {
-  const [videoEl, setVideoEl] = useState(null)
+  const [videoEl, setVideoEl] = useState(null);
   const onVideo = useCallback((el) => {
-    setVideoEl(el)
-  }, [])
+    setVideoEl(el);
+  }, []);
 
   useEffect(() => {
-    if (videoEl == null) return
-    const player = videojs(videoEl, props)
+    if (videoEl == null) return;
+    const player = videojs(videoEl, props);
     return () => {
-      player.dispose()
-    }
-  }, [props, videoEl])
+      player.dispose();
+    };
+  }, [props, videoEl]);
 
   return (
-    <>
-      <h1>The implementation below is using react functions</h1>
-      <div data-vjs-player>
-        <video ref={onVideo} className="video-js" playsInline />
-      </div>
-    </>
-  )
-}
+    <div data-vjs-player>
+      <video ref={onVideo} className="video-js" playsInline />
+    </div>
+  );
+};
 
-export default Player
+export default Player;
