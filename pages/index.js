@@ -20,8 +20,6 @@ const Index = () => {
             controls: true,
             preload: "metada",
             poster: "/loader_light.png",
-            fluid: true,
-            responsive: true,
             sources: [
               {
                 src: data.data[0].url,
