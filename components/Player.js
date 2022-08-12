@@ -18,7 +18,7 @@ const Player = (props) => {
 
   return (
     <div data-vjs-player>
-      <video ref={onVideo} className="video-js vjs-theme-city" playsInline />
+      <video ref={onVideo} className="video-js vjs-theme-fantasy" playsInline />
     </div>
   );
 };
